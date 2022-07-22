@@ -1,0 +1,48 @@
+
+-> this.#addKeyboardListeners(); in controls.js :
+It is a method that checks whenever we press a key or release a key.
+ *[ the reason that hashtag is put before the method is because it is a private method. 
+    We cannot access this outside the control class.]
+
+
+-> requestAnimationFrame(animate) in main.js in method animate(), calls the animate method again and again (like recursion) 
+many times per second.
+It gives the illusion of movement that we want.
+
+-> ctx.restore() :
+ If we do not restore the context, then in each frame of the animation we are going to translate and rotate and translate and rotate again ................infinite series of translation and rotation.
+
+-> in main.js 
+const road = new Road(canvas.width/2,canvas.width*0.9);       // x ( position) : half the canvas width , width : canvas.width   
+
+->in main js 
+ctx.translate(0,-car.y);   =>
+
+    translate(x, y)  : https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/translate
+
+    The translate() method adds a translation transformation to the current matrix by moving the canvas and its origin x units horizontally and y units vertically on the grid.
+
+    x :
+    Distance to move in the horizontal direction. Positive values are to the right, and negative to the left.
+
+    y :
+    Distance to move in the vertical direction. Positive values are down, and negative are up.
+
+----------------------------------------------------------------------------------------------------------------------------------
+-> in sensor .js
+
+
+const offsets = touches.map(e=>e.offset);
+
+The array(touches). map() method basically goes through all the elements from this array.
+And for each element, it takes its offset. 
+Now this part returns a new array.
+
+
+
+
+
+
+/*
+TIMESTAMP :  25:28
+*/
