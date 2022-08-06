@@ -32,12 +32,22 @@ ctx.translate(0,-car.y);   =>
 -> in sensor .js
 
 
-const offsets = touches.map(e=>e.offset);
+1> const offsets = touches.map(e=>e.offset);
 
-The array(touches). map() method basically goes through all the elements from this array.
-And for each element, it takes its offset. 
-Now this part returns a new array.
+    The array(touches). map() method basically goes through all the elements from this array : touches
+    And for each element, it takes its offset. 
+    Now this part returns a new array, in this case is offsets.
 
+2> const minOffset = Math.min(...offsets);
+
+    the minimum method doesnt accept array as an individual value. 
+    So this ... operator is spreading the "offsets" array into many different individual values.
+
+3> return touches.find(e => e.offset == minOffset);
+
+    And finally return the touch from "touches" array that has the minimum offset using this find method here.
+
+------------------------------------------------------------------------------------------------------------------------
 
 
 
